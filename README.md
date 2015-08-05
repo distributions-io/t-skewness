@@ -40,27 +40,27 @@ var matrix = require( 'dstructs-matrix' ),
 	i;
 
 out = skewness( 2 );
-// returns ~NaN
+// returns NaN
 
 v = [ 2, 4, 8, 16 ];
 out = skewness( v );
 
-// returns [ ~NaN, ~0.000, ~0.000, ~0.000 ]
+// returns [ NaN, 0, 0, 0 ]
 
 v = new Float32Array( v );
 out = skewness( v );
-// returns Float64Array( [~NaN,~0.000,~0.000,~0.000] )
+// returns Float64Array( [NaN,0,0,0] )
 
 v =  matrix( [ 2, 4, 8, 16 ], [2,2] );
 /*
-	[ 2 4,
+	[ 2 4
 	  8 16 ]
 */
 
 out = skewness( v );
 /*
-	[ ~NaN ~0.000,
-	  ~0.000 ~0.000 ]
+	[ NaN 0
+	  0 0 ]
 */
 ```
 
@@ -89,7 +89,7 @@ function getValue( d, i ) {
 var out = skewness( v, {
 	'accessor': getValue
 });
-// returns [ ~NaN, ~0.000, ~0.000, ~0.000 ]
+// returns [ NaN, 0, 0, 0 ]
 ```
 
 To [deepset](https://github.com/kgryte/utils-deep-set) an object `array`, provide a key path and, optionally, a key path separator.
@@ -105,10 +105,10 @@ var v = [
 var out = skewness( v, 'x|1', '|' );
 /*
 	[
-		{'x':[9,~NaN]},
-		{'x':[9,~0.000]},
-		{'x':[9,~0.000]},
-		{'x':[9,~0.000]},
+		{'x':[9,NaN]},
+		{'x':[9,0]},
+		{'x':[9,0]},
+		{'x':[9,0]},
 	]
 */
 
@@ -126,13 +126,13 @@ v = new Float64Array( [ 2,4,8,16 ] );
 out = skewness( v, {
 	'dtype': 'int32'
 });
-// returns Int32Array( [ NaN,0,0,0 ] )
+// returns Int32Array( [ 0,0,0,0 ] )
 
 // Works for plain arrays, as well...
 out = skewness( [2,4,8,16], {
 	'dtype': 'int32'
 });
-// returns Int32Array( [ NaN,0,0,0 ] )
+// returns Int32Array( [ 0,0,0,0 ] )
 ```
 
 By default, the function returns a new data structure. To mutate the input data structure (e.g., when input values can be discarded or when optimizing memory usage), set the `copy` option to `false`.
@@ -149,14 +149,14 @@ v = [ 2, 4, 8, 16 ];
 out = skewness( v, {
 	'copy': false
 });
-// returns [ ~NaN, ~0.000, ~0.000, ~0.000 ]
+// returns [ NaN, 0, 0, 0 ]
 
 bool = ( data === out );
 // returns true
 
 mat = matrix( [ 2, 4, 8, 16 ], [2,2] );
 /*
-	[ 2 4,
+	[ 2 4
 	  8 16 ]
 */
 
@@ -164,8 +164,8 @@ out = skewness( mat, {
 	'copy': false
 });
 /*
-	[ ~NaN ~0.000,
-	  ~0.000 ~0.000 ]
+	[ NaN 0
+	  0 0 ]
 */
 
 bool = ( mat === out );
