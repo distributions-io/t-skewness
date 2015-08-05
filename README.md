@@ -6,13 +6,12 @@ Skewness
 
 The [skewness](https://en.wikipedia.org/wiki/skewness) for a [Student t](https://en.wikipedia.org/wiki/Student t_distribution) random variable is
 
-<div class="equation" align="center" data-raw-text="\operatorname{}\left[ X \right] = " data-equation="eq:skewness">
+<div class="equation" align="center" data-raw-text="\operatorname{skew}\left( X \right) = 0" data-equation="eq:skewness">
 	<img src="" alt="skewness for a Student t distribution.">
 	<br>
 </div>
 
-where `v > 0` is the degrees of freedom.
-
+for `v > 3`, where `v` is the degrees of freedom of the distribution. For any `v <= 3`, the skewness is undefined. In this case, `NaN` is returned by this module.
 
 ## Installation
 

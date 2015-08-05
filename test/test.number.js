@@ -28,7 +28,7 @@ describe( 'number skewness', function tests() {
 	});
 
 	it( 'should compute the distribution skewness', function test() {
-		assert.closeTo( skewness( 2 ), NaN, 1e-5 );
+		assert.isTrue( isnan( skewness( 2 ) ) );
 		assert.closeTo( skewness( 4  ), 0, 1e-5 );
 		assert.closeTo( skewness( 8  ), 0, 1e-5 );
 		assert.closeTo( skewness( 16  ), 0, 1e-5 );
