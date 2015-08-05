@@ -2,12 +2,12 @@ Skewness
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> [Student t](https://en.wikipedia.org/wiki/Student t_distribution) distribution [skewness](https://en.wikipedia.org/wiki/skewness).
+> [Student's t](https://en.wikipedia.org/wiki/Student's_t-distribution) distribution [skewness](https://en.wikipedia.org/wiki/skewness).
 
-The [skewness](https://en.wikipedia.org/wiki/skewness) for a [Student t](https://en.wikipedia.org/wiki/Student t_distribution) random variable is
+The [skewness](https://en.wikipedia.org/wiki/skewness) for a [Student's t](https://en.wikipedia.org/wiki/Student's_t-distribution) random variable is
 
 <div class="equation" align="center" data-raw-text="\operatorname{skew}\left( X \right) = 0" data-equation="eq:skewness">
-	<img src="" alt="skewness for a Student t distribution.">
+	<img src="https://cdn.rawgit.com/distributions-io/t-skewness/db3d07de03c7be2b02f42969130a8fda3f1444f6/docs/img/eqn.svg" alt="Skewness for Student's t distribution.">
 	<br>
 </div>
 
@@ -30,7 +30,7 @@ var skewness = require( 'distributions-t-skewness' );
 
 #### skewness( v[, opts] )
 
-Computes the [skewness](https://en.wikipedia.org/wiki/skewness) for a [Student t](https://en.wikipedia.org/wiki/Student t_distribution) distribution with parameter `v`. `v` may be either a [`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), an [`array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), a [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays), or a [`matrix`](https://github.com/dstructs/matrix).
+Computes the [skewness](https://en.wikipedia.org/wiki/skewness) for a [Student's t](https://en.wikipedia.org/wiki/Student's_t-distribution) distribution with parameter `v`. `v` may be either a [`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), an [`array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), a [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays), or a [`matrix`](https://github.com/dstructs/matrix).
 
 ``` javascript
 var matrix = require( 'dstructs-matrix' ),
